@@ -1,6 +1,6 @@
--- Creating heart_disease (database)
+-- Creating Athlete_Profile (database)
 
-create database heart_disease;
+create database Athlete_profile;
 
 -- Create profile table
 
