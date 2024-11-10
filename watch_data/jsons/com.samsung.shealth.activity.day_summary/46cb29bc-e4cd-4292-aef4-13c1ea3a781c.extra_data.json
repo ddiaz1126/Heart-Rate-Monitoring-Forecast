@@ -1,0 +1,166 @@
+{
+  "mMostActiveMinutes" : 0,
+  "mActivityList" : [
+    {
+      "mActiveTime" : 2316160,
+      "mEndTime" : 33067113,
+      "mCategory" : 204,
+      "mDistance" : 2596,
+      "mActiveTimeType" : 0,
+      "mDuration" : 2316160,
+      "mType" : 1001,
+      "mStartTime" : 30750953,
+      "mCalorie" : 183
+    }
+  ],
+  "mIsMostActiveAchieved" : false,
+  "mUnitDataList" : [
+    {
+      "mCalorie" : 2,
+      "walkStep" : 53,
+      "distance" : 44,
+      "runStep" : 0,
+      "mWalkTime" : 35351,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 30000000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 37,
+      "walkStep" : 814,
+      "distance" : 539,
+      "runStep" : 0,
+      "mWalkTime" : 479157,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 30600000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 47,
+      "walkStep" : 1067,
+      "distance" : 672,
+      "runStep" : 0,
+      "mWalkTime" : 600000,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 31200000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 47,
+      "walkStep" : 1106,
+      "distance" : 672,
+      "runStep" : 0,
+      "mWalkTime" : 600000,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 31800000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 47,
+      "walkStep" : 687,
+      "distance" : 672,
+      "runStep" : 0,
+      "mWalkTime" : 600000,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 32400000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 5,
+      "walkStep" : 80,
+      "distance" : 81,
+      "runStep" : 0,
+      "mWalkTime" : 72992,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 33000000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 4,
+      "walkStep" : 128,
+      "distance" : 92,
+      "runStep" : 0,
+      "mWalkTime" : 85376,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 33600000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 2,
+      "walkStep" : 67,
+      "distance" : 44,
+      "runStep" : 0,
+      "mWalkTime" : 44689,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 34200000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 4,
+      "walkStep" : 142,
+      "distance" : 102,
+      "runStep" : 0,
+      "mWalkTime" : 94714,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 34800000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 19,
+      "walkStep" : 553,
+      "distance" : 397,
+      "runStep" : 0,
+      "mWalkTime" : 354784,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 35400000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 5,
+      "walkStep" : 174,
+      "distance" : 119,
+      "runStep" : 0,
+      "mWalkTime" : 116058,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 36000000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 10,
+      "walkStep" : 313,
+      "distance" : 230,
+      "runStep" : 0,
+      "mWalkTime" : 198039,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 36600000,
+      "mOthersTime" : 0
+    },
+    {
+      "mCalorie" : 0,
+      "walkStep" : 8,
+      "distance" : 6,
+      "runStep" : 0,
+      "mWalkTime" : 5336,
+      "mTimeUnit" : 600000,
+      "mRunTime" : 0,
+      "mStartTime" : 37200000,
+      "mOthersTime" : 0
+    }
+  ],
+  "version" : 1,
+  "mIsGoalAchieved" : false,
+  "mStreakDayCount" : 0,
+  "mAdaptiveGoal" : 0
+}

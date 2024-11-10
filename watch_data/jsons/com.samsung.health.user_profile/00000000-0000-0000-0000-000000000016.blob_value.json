@@ -1,0 +1,41 @@
+{
+  "mDashboardColumns" : 3,
+  "mUpdateTime" : 1714538680659,
+  "mTileInfoList" : [
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.pedometer.1",
+      "mServiceControllerId" : "tracker.pedometer"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.sport_running.1",
+      "mServiceControllerId" : "tracker.sport_running"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.food.1",
+      "mServiceControllerId" : "tracker.food"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.weight.simple",
+      "mServiceControllerId" : "tracker.weight"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.heartrate.simple",
+      "mServiceControllerId" : "tracker.heartrate"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.sport_walking.1",
+      "mServiceControllerId" : "tracker.sport_walking"
+    },
+    {
+      "mPackageName" : "com.sec.android.app.shealth",
+      "mTileId" : "tracker.floor.1",
+      "mServiceControllerId" : "tracker.floor"
+    }
+  ]
+}

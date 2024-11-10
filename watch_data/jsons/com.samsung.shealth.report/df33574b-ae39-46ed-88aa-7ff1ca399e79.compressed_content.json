@@ -1,0 +1,271 @@
+{
+  "mPeriod" : "April 28 - May 4",
+  "mNoData" : "No data",
+  "mSummaryWeight" : {
+    "title" : "Weight",
+    "items" : [
+
+    ]
+  },
+  "mSummaryFood" : {
+    "title" : "Activity details",
+    "subtitle" : "Food",
+    "items" : [
+
+    ]
+  },
+  "mAvgGoalPerformance" : {
+    "food" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 2147483647,
+      "valueOneWeekAgo" : 3.4028234663852886e+38,
+      "validDaysOfPrevious" : 2147483647,
+      "validDays" : 2147483647,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    },
+    "avgGoalPerfTitle" : "Average goal performance",
+    "sleep" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluation" : "1 hr 12 mins",
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 72,
+      "valueOneWeekAgo" : 72,
+      "validDaysOfPrevious" : 2147483647,
+      "difference" : "None",
+      "evaluationUnit" : {
+        "minUnit" : "mins",
+        "hourUnit" : "hr"
+      },
+      "validDays" : 2147483647,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    },
+    "subtitle" : "April 28 - May 4",
+    "avgActivityPerfTitle" : "Average activity",
+    "step" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluation" : "10461Steps",
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 10461,
+      "valueOneWeekAgo" : 73228,
+      "validDaysOfPrevious" : 7,
+      "difference" : "None",
+      "unit" : "Steps",
+      "validDays" : 7,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    }
+  },
+  "mGroupComparison" : {
+    "subtitle" : "You vs. Group",
+    "title" : "Group comparison",
+    "groupComparisonItems" : [
+      {
+        "unit" : "steps",
+        "groupKey" : "Group",
+        "valueMineString" : "10461 Steps",
+        "valueOtherString" : "4959 Steps",
+        "valueOther" : 4959,
+        "groupDescription" : "Group : Men using Samsung Health",
+        "title" : "Average daily steps",
+        "valueMine" : 10461,
+        "type" : "AvgDailySteps",
+        "myKey" : "Me"
+      }
+    ]
+  },
+  "mComparingPeriod" : "April 28 - May 4",
+  "mSummarySleep" : {
+    "dailyUnit" : "hr",
+    "title" : "Activity details",
+    "items" : [
+      {
+        "value" : 72,
+        "key" : "TotalTimeSlept",
+        "keyString" : "Total time slept",
+        "valueString" : "1 hr 12 mins"
+      }
+    ],
+    "subtitle" : "Sleep",
+    "dailyValues" : [
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : -1,
+        "goal" : -1
+      },
+      {
+        "value" : 72,
+        "goal" : -1
+      }
+    ]
+  },
+  "mSummaryStep" : {
+    "dailyUnit" : "Steps",
+    "title" : "Activity details",
+    "items" : [
+      {
+        "value" : 73228,
+        "key" : "TotalSteps",
+        "keyString" : "Total steps",
+        "valueString" : "73228"
+      },
+      {
+        "value" : 8.5439310073852539,
+        "key" : "AvgDistance",
+        "keyString" : "Avg. distance",
+        "valueString" : "5.3 mi"
+      },
+      {
+        "value" : 59.807518005371094,
+        "key" : "TotalDistance",
+        "keyString" : "Total distance",
+        "valueString" : "37.2 mi"
+      },
+      {
+        "value" : 488,
+        "key" : "AvgCaloriesBurned",
+        "keyString" : "Avg. calories burned",
+        "valueString" : "488 Cal"
+      },
+      {
+        "value" : 3418,
+        "key" : "TotalCaloriesBurned",
+        "keyString" : "Total calories burned",
+        "valueString" : "3418 Cal"
+      }
+    ],
+    "subtitle" : "Steps",
+    "dailyValues" : [
+      {
+        "value" : 292,
+        "goal" : 6000
+      },
+      {
+        "value" : 3725,
+        "goal" : 6000
+      },
+      {
+        "value" : 11531,
+        "goal" : 6000
+      },
+      {
+        "value" : 9155,
+        "goal" : 6000
+      },
+      {
+        "value" : 8724,
+        "goal" : 6000
+      },
+      {
+        "value" : 9929,
+        "goal" : 6000
+      },
+      {
+        "value" : 29872,
+        "goal" : 6000
+      }
+    ]
+  },
+  "mRequestIdMap" : {
+    "tracker.sleep" : 1,
+    "tracker.food" : 1,
+    "tracker.heartrate" : 1,
+    "tracker.pedometer" : 1,
+    "tracker.weight" : 1
+  },
+  "mLocaleId" : "en_US",
+  "mWeekDay" : {
+    "days" : [
+      "S",
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S"
+    ]
+  },
+  "mTitle" : "Weekly report",
+  "mSummaryCare" : {
+    "subtitleAllStatusHR" : "All tags",
+    "restingHR" : [
+
+    ],
+    "subtiltlePostmealBG" : "Post-meal",
+    "pulseRate" : [
+
+    ],
+    "allStatusBG" : [
+
+    ],
+    "systolic" : [
+
+    ],
+    "subtitlePulseRate" : "Pulse rate",
+    "subtiltlePremealBG" : "Pre-meal",
+    "subtitleDiastolic" : "Diastolic pressure",
+    "subtitleRestingHR" : "Resting heart rate",
+    "subtitleBP" : "Blood pressure",
+    "subtitleSystolic" : "Systolic pressure",
+    "subtitleHR" : "Heart rate",
+    "subtitleBG" : "Blood glucose",
+    "premealBG" : [
+
+    ],
+    "AllStatusHR" : [
+      {
+        "value" : 70,
+        "key" : "HRAvg",
+        "keyString" : "Average",
+        "valueString" : "70.0 bpm"
+      },
+      {
+        "value" : 78,
+        "key" : "HRHighest",
+        "keyString" : "Highest",
+        "valueString" : "78.0 bpm"
+      },
+      {
+        "value" : 62,
+        "key" : "HRLowest",
+        "keyString" : "Lowest",
+        "valueString" : "62.0 bpm"
+      }
+    ],
+    "subtitleAllStatusBG" : "All tags",
+    "postmealBG" : [
+
+    ],
+    "diastolic" : [
+
+    ],
+    "fastingBG" : [
+
+    ],
+    "subtitleFastingBG" : "Fasting",
+    "bpLastReading" : [
+
+    ]
+  }
+}

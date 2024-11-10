@@ -1,0 +1,229 @@
+{
+  "mPeriod" : "October 27 - November 2",
+  "mNoData" : "No data",
+  "mSummaryWeight" : {
+    "title" : "Weight",
+    "items" : [
+
+    ]
+  },
+  "mSummaryFood" : {
+    "title" : "Activity details",
+    "subtitle" : "Food",
+    "items" : [
+
+    ]
+  },
+  "mAvgGoalPerformance" : {
+    "food" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 2147483647,
+      "valueOneWeekAgo" : 3.4028234663852886e+38,
+      "validDaysOfPrevious" : 2147483647,
+      "validDays" : 2147483647,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    },
+    "avgGoalPerfTitle" : "Average goal performance",
+    "sleep" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 2147483647,
+      "valueOneWeekAgo" : 3.4028234663852886e+38,
+      "validDaysOfPrevious" : 2147483647,
+      "validDays" : 2147483647,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    },
+    "subtitle" : "October 27 - November 2",
+    "avgActivityPerfTitle" : "Average activity",
+    "step" : {
+      "validDaysOfTwoWeeks" : 2147483647,
+      "evaluation" : "13033Steps",
+      "evaluationValueOfPrevious" : 2147483647,
+      "evaluationValue" : 13033,
+      "valueOneWeekAgo" : 91233,
+      "validDaysOfPrevious" : 7,
+      "difference" : "None",
+      "unit" : "Steps",
+      "validDays" : 7,
+      "valueTwoWeeksAgo" : 3.4028234663852886e+38,
+      "differenceValue" : 2147483647
+    }
+  },
+  "mGroupComparison" : {
+    "subtitle" : "You vs. Group",
+    "title" : "Group comparison",
+    "groupComparisonItems" : [
+      {
+        "unit" : "steps",
+        "groupKey" : "Group",
+        "valueMineString" : "13033 Steps",
+        "valueOtherString" : "4856 Steps",
+        "valueOther" : 4856,
+        "groupDescription" : "Group : Men using Samsung Health",
+        "title" : "Average daily steps",
+        "valueMine" : 13033,
+        "type" : "AvgDailySteps",
+        "myKey" : "Me"
+      }
+    ]
+  },
+  "mComparingPeriod" : "October 27 - November 2",
+  "mSummarySleep" : {
+    "title" : "Activity details",
+    "subtitle" : "Sleep",
+    "items" : [
+
+    ]
+  },
+  "mSummaryStep" : {
+    "dailyUnit" : "Steps",
+    "title" : "Activity details",
+    "items" : [
+      {
+        "value" : 91233,
+        "key" : "TotalSteps",
+        "keyString" : "Total steps",
+        "valueString" : "91233"
+      },
+      {
+        "value" : 10.462883949279785,
+        "key" : "AvgDistance",
+        "keyString" : "Avg. distance",
+        "valueString" : "6.5 mi"
+      },
+      {
+        "value" : 73.240188598632812,
+        "key" : "TotalDistance",
+        "keyString" : "Total distance",
+        "valueString" : "45.5 mi"
+      },
+      {
+        "value" : 480,
+        "key" : "AvgCaloriesBurned",
+        "keyString" : "Avg. calories burned",
+        "valueString" : "480 Cal"
+      },
+      {
+        "value" : 3363,
+        "key" : "TotalCaloriesBurned",
+        "keyString" : "Total calories burned",
+        "valueString" : "3363 Cal"
+      }
+    ],
+    "subtitle" : "Steps",
+    "dailyValues" : [
+      {
+        "value" : 10459,
+        "goal" : 7500
+      },
+      {
+        "value" : 9643,
+        "goal" : 7500
+      },
+      {
+        "value" : 12121,
+        "goal" : 7500
+      },
+      {
+        "value" : 9711,
+        "goal" : 7500
+      },
+      {
+        "value" : 17171,
+        "goal" : 7500
+      },
+      {
+        "value" : 12103,
+        "goal" : 7500
+      },
+      {
+        "value" : 20025,
+        "goal" : 7500
+      }
+    ]
+  },
+  "mRequestIdMap" : {
+    "tracker.sleep" : 1,
+    "tracker.food" : 1,
+    "tracker.heartrate" : 1,
+    "tracker.pedometer" : 1,
+    "tracker.weight" : 1
+  },
+  "mLocaleId" : "en_US",
+  "mWeekDay" : {
+    "days" : [
+      "S",
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S"
+    ]
+  },
+  "mTitle" : "Weekly report",
+  "mSummaryCare" : {
+    "subtitleAllStatusHR" : "All tags",
+    "restingHR" : [
+
+    ],
+    "subtiltlePostmealBG" : "Post-meal",
+    "pulseRate" : [
+
+    ],
+    "allStatusBG" : [
+
+    ],
+    "systolic" : [
+
+    ],
+    "subtitlePulseRate" : "Pulse rate",
+    "subtiltlePremealBG" : "Pre-meal",
+    "subtitleDiastolic" : "Diastolic pressure",
+    "subtitleRestingHR" : "Resting heart rate",
+    "subtitleBP" : "Blood pressure",
+    "subtitleSystolic" : "Systolic pressure",
+    "subtitleHR" : "Heart rate",
+    "subtitleBG" : "Blood glucose",
+    "premealBG" : [
+
+    ],
+    "AllStatusHR" : [
+      {
+        "value" : 82,
+        "key" : "HRAvg",
+        "keyString" : "Average",
+        "valueString" : "82.0 bpm"
+      },
+      {
+        "value" : 82,
+        "key" : "HRHighest",
+        "keyString" : "Highest",
+        "valueString" : "82.0 bpm"
+      },
+      {
+        "value" : 82,
+        "key" : "HRLowest",
+        "keyString" : "Lowest",
+        "valueString" : "82.0 bpm"
+      }
+    ],
+    "subtitleAllStatusBG" : "All tags",
+    "postmealBG" : [
+
+    ],
+    "diastolic" : [
+
+    ],
+    "fastingBG" : [
+
+    ],
+    "subtitleFastingBG" : "Fasting",
+    "bpLastReading" : [
+
+    ]
+  }
+}
