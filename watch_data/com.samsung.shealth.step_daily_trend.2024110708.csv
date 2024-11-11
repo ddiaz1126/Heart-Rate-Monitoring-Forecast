@@ -1,4 +1,3 @@
-com.samsung.shealth.step_daily_trend,1148009,6
 speed,day_time,pkg_name,count,binning_data,source_pkg_name,source_type,calorie,deviceuuid,datauuid,distance,create_time,update_time
 2.333333,1714089600000,com.sec.android.app.shealth,9164,24bbb5cb-3f74-4ae1-b1ac-9d3278268a27.binning_data,com.sec.android.app.shealth,23,321.490000,xtfbSOmziO,24bbb5cb-3f74-4ae1-b1ac-9d3278268a27,6858.598000,"04/30/2024, 12:17:49 PM","04/30/2024, 12:17:49 PM",
 2.655528,1714176000000,com.sec.android.app.shealth,29141,92ed3543-29bc-4c56-bb59-0e42ae1a9fcd.binning_data,com.sec.android.app.shealth,23,1459.960000,xtfbSOmziO,92ed3543-29bc-4c56-bb59-0e42ae1a9fcd,24145.513000,"04/30/2024, 12:17:49 PM","04/30/2024, 12:17:49 PM",
