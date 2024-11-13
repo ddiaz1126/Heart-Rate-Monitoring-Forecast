@@ -1,0 +1,59 @@
+import os
+import json
+import xml.etree.ElementTree as ET
+
+tcx_folder_path = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/original_exercises_tcx_files'  # Update with your folder path
+output_folder_path = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/parsed_json_files'  # Folder where JSON files will be saved
+
+# Function to parse TCX file and convert to JSON
+def convert_tcx_to_json(tcx_file_path, output_file_path):
+    try:
+        # Parse the TCX file
+        tree = ET.parse(tcx_file_path)
+        root = tree.getroot()
+
+        # Initialize a list to store the extracted trackpoint data
+        trackpoints_data = []
+
+        # Iterate over the trackpoints in the XML
+        for trackpoint in root.findall('.//Activities/Activity/Lap/Track/Trackpoint'):
+            trackpoint_info = {}
+
+            # Extract relevant information from each trackpoint
+            trackpoint_info['time'] = trackpoint.find('Time').text
+            trackpoint_info['heart_rate'] = trackpoint.find('.//HeartRateBpm/Value').text if trackpoint.find('.//HeartRateBpm/Value') is not None else None
+            trackpoint_info['latitude'] = trackpoint.find('.//Position/LatitudeDegrees').text if trackpoint.find('.//Position/LatitudeDegrees') is not None else None
+            trackpoint_info['longitude'] = trackpoint.find('.//Position/LongitudeDegrees').text if trackpoint.find('.//Position/LongitudeDegrees') is not None else None
+
+            # Append each trackpoint's data to the list
+            trackpoints_data.append(trackpoint_info)
+
+        # Convert the list of trackpoint data to JSON format
+        json_data = json.dumps(trackpoints_data, indent=4)
+
+        # Extract the base name without extension
+        base_filename = os.path.splitext(os.path.basename(tcx_file_path))[0]
+
+        # Modify the output file path to handle duplicates by appending an index
+        output_file_path = os.path.join(output_folder_path, base_filename + ".json")
+
+        # Ensure the output filename is unique (in case of duplicates)
+        counter = 1
+        while os.path.exists(output_file_path):
+            output_file_path = os.path.join(output_folder_path, f"{base_filename} ({counter}).json")
+            counter += 1
+
+        # Save the JSON data to a file
+        with open(output_file_path, 'w') as json_file:
+            json_file.write(json_data)
+
+        print(f"Processed and saved: {tcx_file_path} to {output_file_path}")
+    except Exception as e:
+        print(f"Error processing {tcx_file_path}: {e}")
+
+# Iterate through all the TCX files in the specified folder
+for filename in os.listdir(tcx_folder_path):
+    if filename.endswith('.tcx'):  # Ensure only TCX files are processed
+        tcx_file_path = os.path.join(tcx_folder_path, filename)
+        # Convert each TCX file to JSON
+        convert_tcx_to_json(tcx_file_path, output_folder_path)
