@@ -1,59 +1,95 @@
 import os
-import json
 import xml.etree.ElementTree as ET
+import pandas as pd
 
-tcx_folder_path = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/original_exercises_tcx_files'  # Update with your folder path
-output_folder_path = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/parsed_json_files'  # Folder where JSON files will be saved
+# Define the input and output directories
+input_folder = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/original_exercises_tcx_files'  # Folder containing your TCX files
+output_folder = '/Users/daviddiaz/Desktop/Main/Heart-Rate-Monitoring-Forecast/MapMyRunData/parsed_json_file'  # Folder to save the JSON files
 
-# Function to parse TCX file and convert to JSON
-def convert_tcx_to_json(tcx_file_path, output_file_path):
-    try:
-        # Parse the TCX file
-        tree = ET.parse(tcx_file_path)
-        root = tree.getroot()
+# Create the output folder if it doesn't exist
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
-        # Initialize a list to store the extracted trackpoint data
-        trackpoints_data = []
+# Function to process each TCX file and save as JSON
+def process_tcx_file(tcx_file):
+    tree = ET.parse(tcx_file)
+    root = tree.getroot()
 
-        # Iterate over the trackpoints in the XML
-        for trackpoint in root.findall('.//Activities/Activity/Lap/Track/Trackpoint'):
-            trackpoint_info = {}
+    # Define the XML namespace
+    namespace = {'ns': 'http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'}
 
-            # Extract relevant information from each trackpoint
-            trackpoint_info['time'] = trackpoint.find('Time').text
-            trackpoint_info['heart_rate'] = trackpoint.find('.//HeartRateBpm/Value').text if trackpoint.find('.//HeartRateBpm/Value') is not None else None
-            trackpoint_info['latitude'] = trackpoint.find('.//Position/LatitudeDegrees').text if trackpoint.find('.//Position/LatitudeDegrees') is not None else None
-            trackpoint_info['longitude'] = trackpoint.find('.//Position/LongitudeDegrees').text if trackpoint.find('.//Position/LongitudeDegrees') is not None else None
+    # Extract activity data
+    activity = root.find('.//ns:Activity', namespace)
+    activity_sport = activity.attrib['Sport']
+    activity_id = activity.find('ns:Id', namespace).text
 
-            # Append each trackpoint's data to the list
-            trackpoints_data.append(trackpoint_info)
+    # Extract lap data
+    lap = activity.find('ns:Lap', namespace)
+    lap_start_time = lap.attrib['StartTime']
+    lap_total_time_seconds = lap.find('ns:TotalTimeSeconds', namespace).text
+    lap_distance_meters = lap.find('ns:DistanceMeters', namespace).text
 
-        # Convert the list of trackpoint data to JSON format
-        json_data = json.dumps(trackpoints_data, indent=4)
+    # Extract trackpoint data (GPS and time)
+    trackpoints = lap.find('ns:Track', namespace).findall('ns:Trackpoint', namespace)
 
-        # Extract the base name without extension
-        base_filename = os.path.splitext(os.path.basename(tcx_file_path))[0]
+    # Loop through the trackpoints to extract time, position, altitude, and distance
+    track_data = []
+    for trackpoint in trackpoints:
+        time = trackpoint.find('ns:Time', namespace).text
+        position = trackpoint.find('ns:Position', namespace)
+        if position is not None:
+            latitude = position.find('ns:LatitudeDegrees', namespace).text
+            longitude = position.find('ns:LongitudeDegrees', namespace).text
+        else:
+            latitude, longitude = None, None
+        
+        # Handle missing altitude or distance
+        altitude = trackpoint.find('ns:AltitudeMeters', namespace)
+        if altitude is not None:
+            altitude = altitude.text
+        else:
+            altitude = None
+        
+        distance = trackpoint.find('ns:DistanceMeters', namespace)
+        if distance is not None:
+            distance = distance.text
+        else:
+            distance = None
+        
+        # Append the trackpoint data to the list
+        track_data.append({
+            'time': time,
+            'latitude': latitude,
+            'longitude': longitude,
+            'altitude': altitude,
+            'distance': distance
+        })
 
-        # Modify the output file path to handle duplicates by appending an index
-        output_file_path = os.path.join(output_folder_path, base_filename + ".json")
+    # Create a DataFrame from the track_data list
+    df = pd.DataFrame(track_data)
 
-        # Ensure the output filename is unique (in case of duplicates)
-        counter = 1
-        while os.path.exists(output_file_path):
-            output_file_path = os.path.join(output_folder_path, f"{base_filename} ({counter}).json")
-            counter += 1
+    # Add additional activity and lap data to the DataFrame
+    df['activity_sport'] = activity_sport
+    df['activity_id'] = activity_id
+    df['lap_start_time'] = lap_start_time
+    df['lap_total_time_seconds'] = lap_total_time_seconds
+    df['lap_distance_meters'] = lap_distance_meters
 
-        # Save the JSON data to a file
-        with open(output_file_path, 'w') as json_file:
-            json_file.write(json_data)
+    # Convert 'time' column to datetime
+    df['time'] = pd.to_datetime(df['time'], errors='coerce', utc=True)
+    df['date'] = df['time'].dt.date
 
-        print(f"Processed and saved: {tcx_file_path} to {output_file_path}")
-    except Exception as e:
-        print(f"Error processing {tcx_file_path}: {e}")
+    # Define the output file name based on the date of the first entry in the 'date' column
+    date_value = df['date'][0]
+    output_file = os.path.join(output_folder, f'{date_value}.json')
 
-# Iterate through all the TCX files in the specified folder
-for filename in os.listdir(tcx_folder_path):
-    if filename.endswith('.tcx'):  # Ensure only TCX files are processed
-        tcx_file_path = os.path.join(tcx_folder_path, filename)
-        # Convert each TCX file to JSON
-        convert_tcx_to_json(tcx_file_path, output_folder_path)
+    # Save the DataFrame as a JSON file
+    df.to_json(output_file, orient='records', lines=True)
+
+# Iterate over all .tcx files in the input folder
+for filename in os.listdir(input_folder):
+    if filename.endswith('.tcx'):  # Only process .tcx files
+        tcx_file = os.path.join(input_folder, filename)
+        process_tcx_file(tcx_file)
+
+print("TCX files processed and saved as JSON.")
