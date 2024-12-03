@@ -1,16 +1,16 @@
-Hike Name,Length,Elev_gain(ft),moving_time,Avg_pace,Calories,total_time
-Afternoon hike at Mission Peak via Peak Meadow Trail,5.82mi,2185,2:21:00,24.13,1223,2:28:40
-Afternoon hike at Stonewall Panoramic Loop,2.88mi,801,1:08:26,23.45,594,1:08:26
-Afternoon hike at Battery Construction 129 and Hawk Hill,0.21mi,95,5:11,24:28:00,45,5:11
-Afternoon hike at Rodeo Beach to Hill 88,4.16mi,1050,1:25:42,20:37,743,1:31:54
-fternoon hike at Montara Mountain North Peak Loop,7.27mi,1749,2:36:47,21:34,1360,2:43:52
-Evening hike at Palos Colorados Sequoia Bayview Loop Trail,3.21mi,827,1:09:51,21:46,606,1:09:51
-"Afternoon hike at Dunn, Stream, Graham Trail Loop",7.95mi,1506,2:40:57,20:15,1396,2:43:02
-Evening hike at Stonewall Panoramic Loop,2.87mi,794,1:05:18,22:43,566,1:05:18
-"Afternoon hike at Upper Big Springs, Lower Big Springs, and Seaview Trail",3.74mi,833,1:14:04,19:49,642,1:15:02
-Afternoon hike at Bunting Trail,3.32mi,1240,1:24:26,25:24:00,732,1:38:16
-Morning hike at Pa'rus Trail,3.22mi,151,1:04:12,19:55,557,1:04:12
-Afternoon hike at Red Reef Trail,1.35mi,118,30:44:00,22:50,267,35:00:00
-Afternoon hike at Sunset Point and Sunrise Point via Rim Trail,0.63mi,49,16:46,26:47:00,145,19:03
-Morning hike,9.86mi,741,1:30:54,9:13,788,1:51:10
-Morning hike (1),1.78mi,545,1:04:26,36:15:00,559,1:39:33
+Hike Name,Length,Elev_gain(ft),moving_time,Avg_pace,Calories,total_time,Date
+Afternoon hike at Mission Peak via Peak Meadow Trail,5.82mi,2185,2:21:00,24.13,1223,2:28:40,12-1-2024
+Afternoon hike at Stonewall Panoramic Loop,2.88mi,801,1:08:26,23.45,594,1:08:26,11-28-2024
+Afternoon hike at Battery Construction 129 and Hawk Hill,0.21mi,95,0:05:11,24:28:00,45,0:5:11:00,11-24-2024
+Afternoon hike at Rodeo Beach to Hill 88,4.16mi,1050,1:25:42,20:37,743,1:31:54,11-24-2024
+fternoon hike at Montara Mountain North Peak Loop,7.27mi,1749,2:36:47,21:34,1360,2:43:52,11-2-2024
+Evening hike at Palos Colorados Sequoia Bayview Loop Trail,3.21mi,827,1:09:51,21:46,606,1:09:51,11-1-2024
+"Afternoon hike at Dunn, Stream, Graham Trail Loop",7.95mi,1506,2:40:57,20:15,1396,2:43:02,10-20-2024
+Evening hike at Stonewall Panoramic Loop,2.87mi,794,1:05:18,22:43,566,1:05:18,9-22-2024
+"Afternoon hike at Upper Big Springs, Lower Big Springs, and Seaview Trail",3.74mi,833,1:14:04,19:49,642,1:15:02,9-1-2024
+Afternoon hike at Bunting Trail,3.32mi,1240,1:24:26,25:24:00,732,1:38:16,8-8-2024
+Morning hike at Pa'rus Trail,3.22mi,151,1:04:12,19:55,557,1:04:12,8-8-2024
+Afternoon hike at Red Reef Trail,1.35mi,118,30:44:00,22:50,267,35:00:00,8-7-2024
+Afternoon hike at Sunset Point and Sunrise Point via Rim Trail,0.63mi,49,0:16:46,26:47:00,145,0:19:03,8-7-2024
+Morning hike,9.86mi,741,1:30:54,9:13,788,1:51:10,7-16-2024
+Morning hike (1),1.78mi,545,1:04:26,36:15:00,559,1:39:33,7-15-2024
