@@ -23,3 +23,4 @@ Structure:
 
   This notebook contains the concatenation of data, analysis, and modeling. The model is then introduced the unseen run, ran on the first 16 minutes, and then predicts the last two minutes. 
 
+Activate conda env: source hr_env/bin/activate

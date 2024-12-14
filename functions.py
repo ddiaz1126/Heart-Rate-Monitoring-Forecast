@@ -16,3 +16,4 @@ def convert_time_to_seconds(time_str):
             return None
     except Exception:
         return None
+    
