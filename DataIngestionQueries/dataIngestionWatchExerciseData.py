@@ -37,6 +37,9 @@ for index, row in exercise_overview.iterrows():
         # Create a Date Column
         exercise_df['Date'] = exercise_df['start_time'].dt.date.astype(str)
 
+        # File Source
+        exercise_df['live_data'] = row['live_data']
+
         # Append to the list
         all_exercises.append(exercise_df)
     except Exception as e:
@@ -62,8 +65,8 @@ try:
     # Prepare the insert statement
     insert_query = sql.SQL("""
     INSERT INTO watch_exercise_data_db (
-        start_time, speed, heart_rate, elapsed_seconds, Date, cadence, distance
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s)
+        start_time, speed, heart_rate, elapsed_seconds, Date, live_data, cadence, distance
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
     """)
 
     # Convert DataFrame to list of tuples
